@@ -55,3 +55,38 @@ double multiplicar(double a, double b) {
 }
 
 
+double dividir(double a, double b) {
+    //Excepción
+        //Antes de dividir, verificamos si el denominador es 0
+    if (b == 0) {
+        //throw detiene la función inmediatamente No devuelve nada, sino que "tira" el error al 'try-catch' del main.
+        throw runtime_error("Division entre cero no permitida.");
+    }
+    return a / b;
+}
+
+
+//Parámetros por omisión
+//Aqui NO se pone el = 2, eso solo va en el prototipo de arriba. Aquí se define normal.
+double potencia(double base, int exponente) {
+    return pow(base, exponente); //Funcion de la librería <cmath>.
+}
+
+double raizCuadrada(double numero) {
+    //Excepción para raíz negativa
+    if (numero < 0) {
+        //Si es negativo, lanzamos el error y evitamos que el programa falle haciendo cálculos imposibles.
+        throw runtime_error("No se puede calcular raiz cuadrada de numero negativo.");
+    }
+    return sqrt(numero); //Función de la librería <cmath>.
+}
+
+//Se utiliza recursividad
+long long factorial(int n) {
+    //Caso Base, es la condición para que la recursividad se detenga.
+    //El factorial de 0 o 1 es siempre 1. Sin esto, la función se llamaría infinitamente hasta colapsar la memoria
+    if (n == 0 || n == 1) return 1;
+
+    //La función se llama a sí misma dentro de sí misma.
+    return n * factorial(n - 1);
+}
