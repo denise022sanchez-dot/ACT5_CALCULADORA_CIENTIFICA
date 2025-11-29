@@ -50,6 +50,7 @@ int main()
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
+        try {
 
 
 
@@ -62,6 +63,19 @@ int main()
 
 
 
+
+
+
+
+
+
+        }
+
+        //en el catch: si alguien lanzó un throw runtime_error arriba, este bloque lo atrapa
+        //La variable 'e' contiene el mensaje de error
+        catch (const exception& e) {
+            cout << "\nError: " << e.what() << endl; //.what extrae el texto del mensaje de error
+        }
 
     } while (opcion != 0); //si opcion es 0, el bucle termina y el programa finaliza.
 
