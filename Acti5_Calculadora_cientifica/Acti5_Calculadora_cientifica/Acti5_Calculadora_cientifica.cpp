@@ -42,8 +42,8 @@ int main()
         cout << "3. Restar" << endl;
         cout << "4. Multiplicar" << endl;
         cout << "5. Dividir" << endl;
-        cout << "6. Potencia (con exponente personalizado)" << endl;
-        cout << "7. Cuadrado de un numero (Parametro por omision)" << endl;
+        cout << "6. Potencia " << endl;
+        cout << "7. Cuadrado de un numero " << endl;
         cout << "8. Raiz Cuadrada" << endl;
         cout << "9. Factorial" << endl;
         cout << "0. Salir" << endl;
@@ -55,34 +55,75 @@ int main()
             switch (opcion) {
 
             case 1:
+                cout << "Ingrese dos numeros: ";
+                cin >> num1 >> num2;
+                //busca la función sumar que acepta 2
+                cout << "Resultado: " << sumar(num1, num2) << endl;
                 break;
 
             case 2:
+                cout << "Ingrese tres numeros: ";
+                cin >> num1 >> num2 >> num3;
+                //Ve 3 argumentos y usa automáticamente la versión de sumar para 3
+                cout << "Resultado: " << sumar(num1, num2, num3) << endl;
                 break;
             
             
-            case 1:
+            case 3:
+                cout << "Ingrese dos numeros para restar: ";
+                cin >> num1 >> num2;
+                cout << "Resultado: " << restar(num1, num2) << endl;
                 break;
             
             
-            case 1:
+            case 4:
+                cout << "Ingrese dos numeros para multiplicar: ";
+                cin >> num1 >> num2;
+                cout << "Resultado: " << multiplicar(num1, num2) << endl;
                 break;
             
             
-            case 1:
+            case 5:
+                cout << "Ingrese dividendo y divisor: ";
+                cin >> num1 >> num2;
+                //Si num2 es 0, la función dividir lanzará un error y saltaremos directo al catch
+                cout << "Resultado: " << dividir(num1, num2) << endl;
                 break;
             
             
-            case 1:
+            case 6:
+                cout << "Ingrese base y exponente: ";
+                cin >> num1 >> numFactorial;
+                //Aquí se envian los DOS argumentos explícitamente, no se usa el valor por defecto
+                cout << "Resultado: " << potencia(num1, numFactorial) << endl;
                 break;
             
-            case 1:
+            case 7:
+                cout << "Ingrese el numero a elevar al cuadrado: ";
+                cin >> num1;
+                //Llamamos a 'potencia' enviando SOLO la base
+                //Como falta el segundo argumento, el programa usa automáticamente el "2" definido en el prototipo.
+                cout << "Resultado: " << potencia(num1) << endl;
                 break;
 
-            case 1:
+            case 8:
+                cout << "Ingrese numero para raiz: ";
+                cin >> num1;
+                //Si num1 es negativo, raizCuadrada lanza un error y saltamos al catch
+                cout << "Resultado: " << raizCuadrada(num1) << endl;
                 break;
 
-            case 1:
+            case 9:
+                cout << "Ingrese un entero positivo: ";
+                cin >> numFactorial;
+                //Verificación manual antes de llamar a la función
+                //throw runtime_error crea un error manualmente y lo lanza al catch
+                if (numFactorial < 0) throw runtime_error("El factorial no esta definido para negativos.");
+                cout << "Resultado: " << factorial(numFactorial) << endl;
+                break;
+
+            case 0:
+                cout << "Saliendo..." << endl;
                 break;
 
             default:
