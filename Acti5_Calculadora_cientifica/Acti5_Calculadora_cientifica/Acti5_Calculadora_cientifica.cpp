@@ -27,8 +27,43 @@ long long factorial(int n); // Usamos long long porque los factoriales crecen mu
 
 int main()
 {
-   cout << "Hello World!\n";
+   
 
+    int opcion;
+    double num1, num2, num3; //Se declaran las variables para guardar los números que escriba el usuario.
+    int numFactorial;        //Variable exclusiva para enteros que se usa en potencia y factorial
+
+
+    do {
+        // Mostrar Menú en pantalla
+        cout << "\n--- CALCULADORA AVANZADA ---" << endl;
+        cout << "1. Sumar (2 numeros)" << endl;
+        cout << "2. Sumar (3 numeros) [Sobrecarga]" << endl;
+        cout << "3. Restar" << endl;
+        cout << "4. Multiplicar" << endl;
+        cout << "5. Dividir" << endl;
+        cout << "6. Potencia (con exponente personalizado)" << endl;
+        cout << "7. Cuadrado de un numero (Parametro por omision)" << endl;
+        cout << "8. Raiz Cuadrada" << endl;
+        cout << "9. Factorial" << endl;
+        cout << "0. Salir" << endl;
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    } while (opcion != 0); //si opcion es 0, el bucle termina y el programa finaliza.
 
 
    return 0;
