@@ -34,3 +34,24 @@ int main()
    return 0;
 }
 
+
+//Se desarrollan las funcioens
+
+
+double sumar(double a, double b) {
+    return a + b; //Devuelve la suma simple.
+}
+
+double sumar(double a, double b, double c) {  //Esta es una función distinta en memoria a la anterior, aunque se llamen igual
+    return a + b + c; //Devuelve la suma de 3.
+}
+
+double restar(double a, double b) {
+    return a - b;
+}
+
+double multiplicar(double a, double b) {
+    return a * b;
+}
+
+
