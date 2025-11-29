@@ -52,25 +52,30 @@ int main()
 
         try {
 
+            switch (opcion) {
 
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            default:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                cout << "Opcion no valida." << endl;
+            }
 
         }
-
         //en el catch: si alguien lanzó un throw runtime_error arriba, este bloque lo atrapa
         //La variable 'e' contiene el mensaje de error
         catch (const exception& e) {
